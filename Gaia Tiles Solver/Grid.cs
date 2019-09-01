@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing.Imaging;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Gaia_Tiles_Solver
@@ -16,7 +15,7 @@ namespace Gaia_Tiles_Solver
 		private const int tileOffset_y = 13;
 
 		//private Point[][] pDirections = { new Point[] { new Point(1, 0), new Point(1, -1), new Point(0, -1), new Point(-1, -1), new Point(-1, 0), new Point(0, 1 ) },
-			//							  new Point[] { new Point(1, 1), new Point(1, 0), new Point(0, -1), new Point(-1, 0), new Point(-1, 1), new Point(0, 1 ) }};
+		//							  new Point[] { new Point(1, 1), new Point(1, 0), new Point(0, -1), new Point(-1, 0), new Point(-1, 1), new Point(0, 1 ) }};
 
 		private List<List<Point>> pDirections = new List<List<Point>> { new List<Point> { new Point(1, 0), new Point(1, -1), new Point(0, -1), new Point(-1, -1), new Point(-1, 0), new Point(0, 1 ) },
 										  new List<Point> { new Point(1, 1), new Point(1, 0), new Point(0, -1), new Point(-1, 0), new Point(-1, 1), new Point(0, 1 ) }};
@@ -31,7 +30,7 @@ namespace Gaia_Tiles_Solver
 		};
 
 		private Tile[,] Tiles = new Tile[6, 5];
-		
+
 		public Grid(Bitmap grid)
 		{
 			var img = grid;
@@ -115,7 +114,7 @@ namespace Gaia_Tiles_Solver
 				var tempStepped = stepped.ToList();
 				var neighbourPos = GetNeighbour(new Point(startPos.X, startPos.Y), i);
 
-				if (neighbourPos.X < 0 || neighbourPos.X > 5 || neighbourPos.Y < 0 || neighbourPos.Y > 4) 
+				if (neighbourPos.X < 0 || neighbourPos.X > 5 || neighbourPos.Y < 0 || neighbourPos.Y > 4)
 					return;
 
 				if (stepped.Exists(e => e.X == neighbourPos.X && e.Y == neighbourPos.Y))
@@ -136,7 +135,7 @@ namespace Gaia_Tiles_Solver
 			return new Point(tile.X + dir.X, tile.Y + dir.Y);
 		}
 
-		public static bool operator==(Grid grid1, Grid grid2)
+		public static bool operator ==(Grid grid1, Grid grid2)
 		{
 			bool result = false;
 			Parallel.For(0, grid1.Tiles.GetLength(0) - 1, tile_x =>
@@ -153,7 +152,7 @@ namespace Gaia_Tiles_Solver
 			return result;
 		}
 
-		public static bool operator!=(Grid grid1, Grid grid2)
+		public static bool operator !=(Grid grid1, Grid grid2)
 		{
 			return !(grid1 == grid2);
 		}

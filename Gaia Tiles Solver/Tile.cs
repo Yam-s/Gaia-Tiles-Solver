@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing.Imaging;
-using System.IO;
-using System.Security.Cryptography;
+using System.Linq;
 
 namespace Gaia_Tiles_Solver
 {
@@ -23,7 +18,7 @@ namespace Gaia_Tiles_Solver
 		{
 			this.image = image;
 			this.ImagePos = ImagePos;
-			
+
 			ForegroundHash = GenerateHashForRegion(new Rectangle(new Point(14, 50), new Size(7, 6)));
 			BackgroundHash = GenerateHashForRegion(new Rectangle(new Point(13, 13), new Size(40, 10)));
 		}
@@ -51,14 +46,14 @@ namespace Gaia_Tiles_Solver
 			return hash;
 		}
 		// ROCK 524a5a67ed3c3c3e e7d4d20ac8fdd5b0
-		public static bool operator==(Tile tile1, Tile tile2)
+		public static bool operator ==(Tile tile1, Tile tile2)
 		{
-			if ((tile1.BackgroundHash == tile2.BackgroundHash 
+			if ((tile1.BackgroundHash == tile2.BackgroundHash
 				|| tile1.ForegroundHash == tile2.ForegroundHash
 				|| tile1.BackgroundHash == "bbb2fa7164723a14"  //! WildCard
 				|| tile1.ForegroundHash == "d2daaca3f519ce5d"
 				|| tile2.BackgroundHash == "bbb2fa7164723a14"  //! WildCard
-				|| tile2.ForegroundHash == "d2daaca3f519ce5d") 
+				|| tile2.ForegroundHash == "d2daaca3f519ce5d")
 				&& tile1.ForegroundHash != "524a5a67ed3c3c3e"
 				&& tile2.ForegroundHash != "524a5a67ed3c3c3e"
 				&& tile1.BackgroundHash != "e7d4d20ac8fdd5b0"
@@ -67,7 +62,7 @@ namespace Gaia_Tiles_Solver
 			return false;
 		}
 
-		public static bool operator!=(Tile tile1, Tile tile2)
+		public static bool operator !=(Tile tile1, Tile tile2)
 		{
 			return !(tile1 == tile2);
 		}
