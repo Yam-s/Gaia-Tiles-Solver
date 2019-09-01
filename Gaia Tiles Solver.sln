@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaia Tiles Solver", "Gaia Tiles Solver\Gaia Tiles Solver.csproj", "{28EF6DD7-B865-403D-9ACA-26452793D97A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28EF6DD7-B865-403D-9ACA-26452793D97A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28EF6DD7-B865-403D-9ACA-26452793D97A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28EF6DD7-B865-403D-9ACA-26452793D97A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28EF6DD7-B865-403D-9ACA-26452793D97A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA35B2E0-090F-4B34-8FCC-2BC24071AA03}
+	EndGlobalSection
+EndGlobal
