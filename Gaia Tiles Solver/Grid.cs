@@ -14,11 +14,6 @@ namespace Gaia_Tiles_Solver
 		private const int tileOffset_x = 15;
 		private const int tileOffset_y = 13;
 
-		//private Point[][] pDirections = { new Point[] { new Point(1, 0), new Point(1, -1), new Point(0, -1), new Point(-1, -1), new Point(-1, 0), new Point(0, 1 ) },
-		//							  new Point[] { new Point(1, 1), new Point(1, 0), new Point(0, -1), new Point(-1, 0), new Point(-1, 1), new Point(0, 1 ) }};
-
-		private List<List<Point>> pDirections = new List<List<Point>> { new List<Point> { new Point(1, 0), new Point(1, -1), new Point(0, -1), new Point(-1, -1), new Point(-1, 0), new Point(0, 1 ) },
-										  new List<Point> { new Point(1, 1), new Point(1, 0), new Point(0, -1), new Point(-1, 0), new Point(-1, 1), new Point(0, 1 ) }};
 		public enum HEX_DIR
 		{
 			DOWN_RIGHT = 0,
@@ -29,6 +24,8 @@ namespace Gaia_Tiles_Solver
 			DOWN = 5,
 		};
 
+		private List<List<Point>> pDirections = new List<List<Point>> { new List<Point> { new Point(1, 0), new Point(1, -1), new Point(0, -1), new Point(-1, -1), new Point(-1, 0), new Point(0, 1 ) },
+																		new List<Point> { new Point(1, 1), new Point(1, 0), new Point(0, -1), new Point(-1, 0), new Point(-1, 1), new Point(0, 1 ) }};
 		private Tile[,] Tiles = new Tile[6, 5];
 
 		public Grid(Bitmap grid)
